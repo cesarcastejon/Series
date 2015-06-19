@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @tabla.titulo %>
+</p>
+
+<p>
+  <strong>Categoria:</strong>
+  <%= @tabla.categoria %>
+</p>
+
+<%= link_to 'Edit', edit_tabla_path(@tabla) %> |
+<%= link_to 'Back', tablas_path %>

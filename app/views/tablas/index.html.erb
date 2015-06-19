@@ -1,0 +1,29 @@
+<h1>Listing tablas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Categoria</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tablas.each do |tabla| %>
+      <tr>
+        <td><%= tabla.titulo %></td>
+        <td><%= tabla.categoria %></td>
+        <td><%= link_to 'Show', tabla %></td>
+        <td><%= link_to 'Edit', edit_tabla_path(tabla) %></td>
+        <td><%= link_to 'Destroy', tabla, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tabla', new_tabla_path %>
